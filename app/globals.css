@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #f7f0eb;
+  --color-foreground: #1a1a1a;
+}
+
+body {
+  background: #f7f0eb;
+  color: #1a1a1a;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f0ede4; }
+::-webkit-scrollbar-thumb { background: #c5c2ba; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #a09d96; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fade-up 0.4s ease-out both;
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+.spin-slow {
+  animation: spin-slow 1s linear infinite;
+}
